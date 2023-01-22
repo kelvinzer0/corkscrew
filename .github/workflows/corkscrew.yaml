@@ -69,7 +69,7 @@ jobs:
         run: |
           git clone https://github.com/bryanpkc/corkscrew
           cd corkscrew
-          autoreconf -f -i -Wall,error
+          autoreconf -f -i -Wall
           ./configure
           make
           
@@ -85,7 +85,7 @@ jobs:
         run: |
           git clone https://github.com/bryanpkc/corkscrew
           cd corkscrew
-          autoreconf -f -i -Wall,error
+          autoreconf -f -i -Wall
           ./configure
           make
          
