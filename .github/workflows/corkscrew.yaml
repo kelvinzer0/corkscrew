@@ -13,6 +13,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: Install autoconf mac
+        if: matrix.os == 'macOS-latest'
+        uses: actions/setup-homebrew@v2
+        run: brew install autoconf
       - name: Linux Automake
         if: matrix.os == 'ubuntu-latest'
         run: |
@@ -25,7 +29,7 @@ jobs:
         if: matrix.os == 'windows-latest'
         uses: egor-tensin/setup-cygwin@v4
         with:
-          packages: flexdll cmake gcc-g++ make git gcc-core cygport binutils automake autoconf zip
+          packages: flexdll cmake gcc-g++ make git gcc-core cygport binutils automake autoconf zip libtool autoconf
           
     
       
