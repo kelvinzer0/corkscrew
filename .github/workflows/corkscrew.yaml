@@ -67,7 +67,7 @@ jobs:
         env:
           MY_TOKEN: ${{ secrets.MY_TOKEN }}
         run: |
-          cd C:\cygwin\bin\
+          cd C:\tools\cygwin\bin
           
 
           $pwd = (pwd)
@@ -79,7 +79,7 @@ jobs:
         env:
           MY_TOKEN: ${{ secrets.MY_TOKEN }}
         run: |
-          cd C:\cygwin\bin\
+          cd C:\tools\cygwin\bin
          
          
       
