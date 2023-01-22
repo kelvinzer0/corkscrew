@@ -57,7 +57,7 @@ jobs:
         if: matrix.os == 'windows-latest'
         uses: egor-tensin/setup-cygwin@v4
         with:
-          packages: flexdll cmake gcc-g++ make git gcc-core cygport binutils automake autoconf zip libtool autoconf
+          packages: flexdll cmake gcc-g++ make git gcc-core cygport binutils automake autoconf zip libtool autoconf gettext
           
     
       
@@ -69,7 +69,6 @@ jobs:
         run: |
           git clone https://github.com/bryanpkc/corkscrew
           cd corkscrew
-          autoreconf --install
           ./configure
           make
           
@@ -85,7 +84,6 @@ jobs:
         run: |
           git clone https://github.com/bryanpkc/corkscrew
           cd corkscrew
-          autoreconf --install
           ./configure
           make
          
